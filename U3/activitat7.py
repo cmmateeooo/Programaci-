@@ -1,11 +1,20 @@
 import csv
 
-with open('dades_exercici.csv', 'r') as fitxer:
-    lector_csv = csv.reader(fitxer)
-    for fila in lector_csv:
-             print(fila)
+try:
+  
+    with open('dades_exercici.csv', 'r') as fitxer:
+        lector = csv.reader(fitxer)
+        dades_originals = list(lector)
+        print(dades_originals)
 
-dades =  [["Nom:", "Edat:", "Curs"],["Mateo", "17", "2nSMX-A"]]
-with open('dades_exercici.csv', 'a', newline='') as fitxer:
-    escriptor_csv = csv.writer(fitxer)
-    escriptor_csv.writerows(dades)
+    nou_alumne = ["Mateo", "17", "2nSMX-A"]
+    dades_originals.append(nou_alumne)
+ 
+    with open('dades_exercici.csv', 'a') as fitxer:
+        escriptor = csv.writer(fitxer)
+        escriptor.writerow(nou_alumne)
+   
+
+except Exception as e:
+    print("Error amb el fitxer CSV:", e)
+ 
