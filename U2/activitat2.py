@@ -6,7 +6,7 @@ i = 1
 while i < n:
     nom = input("Nom: ")
     edat = int(input("Edat: "))
-    assist = input("Assistència (S/N): ").lower()
+    assist = input("Assistència (s/n): ").lower()
 
     if edat < 12:
         categoria = "infantil"
