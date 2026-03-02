@@ -1,0 +1,1 @@
+animals =["gos","gat","salmó",5,"tortuga"] 
