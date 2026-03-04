@@ -1,22 +1,21 @@
 notes = [5,7,9,4,6,3,1,8,2,10]
 
-#Variables de les notes abans del bucle.
+for n in notes:
+    print(n)
 
 aprovats = 0
 suspesos = 0
 
-print("Llista de notes:")
-
-#Bucle for per fer recompter de aprovats i suspesos.
+print("Notes aprovades:")
 
 for n in notes:
-    print(n)
-
     if n >= 5:
+        print(f" -{n}")
         aprovats = aprovats + 1
     else:
         suspesos = suspesos + 1
-print("Total d'aprovats")
+
+print("Notes aprovades:")
 print(aprovats)
-print("Total de suspeses")
+print("Notes suspeses:")
 print(suspesos)
